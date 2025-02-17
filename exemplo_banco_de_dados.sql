@@ -98,25 +98,25 @@ INSERT INTO `usuario` (`email`, `senha`, `nome`) VALUES
 
 -- INSERT INTO `loja`
 INSERT INTO `loja` (`nome`, `categoria`, `telefone`, `posicao_x`, `posicao_y`) VALUES
-('Riachuelo', 'Moda', '11987654321', '15', '30'),
-('C&A', 'Moda', '11991234567', '16', '31'),
-('Fast Shop', 'Eletrônicos', '11999887766', '18', '32'),
-('Saraiva', 'Livraria', '11998877665', '20', '33'),
-('Petz', 'Animais', '11996655443', '21', '34'),
-('Apple Store', 'Eletrônicos', '11995544332', '22', '35');
+('Laboratorio G1', 'Laboratórios', '11987654321', '15', '30'),
+('Laboratorio G2', 'Laboratórios', '11991234567', '16', '31'),
+('Sala 1', 'Salas', '11999887766', '18', '32'),
+('Laboratorio G3', 'Laboratórios', '11998877665', '20', '33'),
+('Laboratório G4', 'Labratórios', '11996655443', '21', '34'),
+('Sala 2', 'Salas', '11995544332', '22', '35');
 
 -- INSERT INTO `produto`
 INSERT INTO `produto` (`nome`, `descricao`) VALUES
-('Mouse Gamer', 'Mouse com sensor óptico de alta precisão'),
-('Teclado Mecânico', 'Teclado com switches mecânicos e retroiluminação RGB'),
-('Smart TV 4K', 'Smart TV com resolução 4K, 55 polegadas'),
-('Fone de Ouvido Bluetooth', 'Fone de ouvido sem fio com cancelamento de ruído'),
-('Cafeteira Expresso', 'Cafeteira expresso com sistema de cápsulas'),
-('Livro - 1984', 'Clássico de George Orwell em edição de bolso'),
-('Tênis Esportivo', 'Tênis leve e confortável para corrida'),
-('Bolsa Feminina', 'Bolsa de couro sintético, várias cores'),
-('Ventilador de Mesa', 'Ventilador compacto com três velocidades'),
-('Tablet Samsung', 'Tablet com tela de 10 polegadas e sistema Android');
+('Sensor Ultrassônico', 'Sensor de proximidade para medição de distância em robótica'),
+('Microcontrolador ESP32', 'Placa de desenvolvimento com Wi-Fi e Bluetooth integrados'),
+('Motor de Passo', 'Motor elétrico de alta precisão para controle de movimento'),
+('Câmera Raspberry Pi', 'Módulo de câmera para visão computacional em projetos embarcados'),
+('Bateria LiPo 3S', 'Bateria recarregável de polímero de lítio, 11.1V'),
+('Impressora 3D', 'Impressora de filamento PLA/ABS para prototipagem rápida'),
+('Kit de Chaves de Precisão', 'Conjunto de ferramentas para montagem e manutenção de eletrônicos'),
+('Placa Controladora CNC', 'Placa para controle de motores em máquinas CNC'),
+('Sensor de Cor TCS3200', 'Sensor para detecção de cores em aplicações robóticas'),
+('Módulo GPS', 'Módulo de geolocalização para navegação autônoma');
 
 -- INSERT INTO `dispositivo`
 INSERT INTO `dispositivo` (`nome`, `IP`, `permissao_acesso`, `tipo`) VALUES
@@ -125,97 +125,97 @@ INSERT INTO `dispositivo` (`nome`, `IP`, `permissao_acesso`, `tipo`) VALUES
 
 -- INSERT INTO `pedido`
 INSERT INTO `pedido` (`id_usuario`, `id_loja`, `id_dispositivo`, `data_hora`, `status`, `endereco_entrega`, `data_hora_entrega`) VALUES
-(1, 1, 1, '2024-11-05 10:00:00', 'Pendente', 'Riachuelo', NULL),
-(2, 1, 2, '2024-11-05 10:05:00', 'Concluído', 'Riachuelo', '2024-11-05 10:30:00'),
-(3, 1, 1, '2024-11-05 11:15:00', 'Cancelado', 'C&A', NULL),
-(1, 1, 2, '2024-11-05 11:45:00', 'Em Andamento', 'C&A', NULL),
-(2, 3, 1, '2024-11-05 12:00:00', 'Pendente', 'Fast Shop', NULL),
-(3, 3, 2, '2024-11-05 12:30:00', 'Concluído', 'Fast Shop', '2024-11-05 13:00:00'),
-(1, 4, 1, '2024-11-05 13:15:00', 'Pendente', 'Saraiva', NULL),
-(2, 4, 2, '2024-11-05 13:45:00', 'Concluído', 'Saraiva', '2024-11-05 14:20:00'),
-(3, 5, 1, '2024-11-05 14:30:00', 'Cancelado', 'Petz', NULL),
-(1, 5, 2, '2024-11-05 15:00:00', 'Pendente', 'Petz', NULL),
-(2, 6, 1, '2024-11-05 15:30:00', 'Concluído', 'Apple Store', '2024-11-05 16:00:00'),
-(3, 6, 2, '2024-11-05 16:10:00', 'Pendente', 'Apple Store', NULL),
-(1, 1, 1, '2024-11-06 09:00:00', 'Pendente', 'Riachuelo', NULL),
-(2, 1, 2, '2024-11-06 09:30:00', 'Concluído', 'Riachuelo', '2024-11-06 10:00:00'),
-(3, 2, 1, '2024-11-06 10:45:00', 'Cancelado', 'C&A', NULL),
-(1, 2, 2, '2024-11-06 11:15:00', 'Em Andamento', 'C&A', NULL),
-(2, 3, 1, '2024-11-06 11:30:00', 'Pendente', 'Fast Shop', NULL),
-(3, 3, 2, '2024-11-06 12:00:00', 'Concluído', 'Fast Shop', '2024-11-06 12:30:00'),
-(1, 4, 1, '2024-11-06 12:45:00', 'Pendente', 'Saraiva', NULL),
-(2, 4, 2, '2024-11-06 13:15:00', 'Concluído', 'Saraiva', '2024-11-06 13:50:00'),
-(3, 5, 1, '2024-11-06 14:00:00', 'Cancelado', 'Petz', NULL),
-(1, 5, 2, '2024-11-06 14:30:00', 'Pendente', 'Petz', NULL),
-(2, 6, 1, '2024-11-06 15:00:00', 'Concluído', 'Apple Store', '2024-11-06 15:30:00'),
-(3, 6, 2, '2024-11-06 15:40:00', 'Pendente', 'Apple Store', NULL),
-(1, 1, 1, '2024-11-07 08:45:00', 'Pendente', 'Riachuelo', NULL),
-(2, 1, 2, '2024-11-07 09:15:00', 'Concluído', 'Riachuelo', '2024-11-07 09:45:00'),
-(3, 3, 1, '2024-11-07 10:00:00', 'Cancelado', 'C&A', NULL),
-(1, 3, 2, '2024-11-07 10:30:00', 'Em Andamento', 'C&A', NULL),
-(2, 3, 1, '2024-11-07 10:45:00', 'Pendente', 'Fast Shop', NULL),
-(3, 3, 2, '2024-11-07 11:15:00', 'Concluído', 'Fast Shop', '2024-11-07 11:45:00'),
-(1, 4, 1, '2024-11-07 12:00:00', 'Pendente', 'Saraiva', NULL),
-(2, 4, 2, '2024-11-07 12:30:00', 'Concluído', 'Saraiva', '2024-11-07 13:05:00'),
-(3, 5, 1, '2024-11-07 13:20:00', 'Cancelado', 'Petz', NULL),
-(1, 3, 2, '2024-11-07 13:50:00', 'Pendente', 'Petz', NULL),
-(2, 6, 1, '2024-11-07 14:15:00', 'Concluído', 'Apple Store', '2024-11-07 14:45:00'),
-(3, 6, 2, '2024-11-07 15:00:00', 'Pendente', 'Apple Store', NULL),
-(1, 1, 1, '2024-11-08 08:00:00', 'Pendente', 'Riachuelo', NULL),
-(2, 1, 2, '2024-11-08 08:30:00', 'Concluído', 'Riachuelo', '2024-11-08 09:00:00'),
-(3, 2, 1, '2024-11-08 09:15:00', 'Cancelado', 'C&A', NULL),
-(1, 2, 2, '2024-11-08 09:45:00', 'Em Andamento', 'C&A', NULL),
-(2, 3, 1, '2024-11-08 10:00:00', 'Pendente', 'Fast Shop', NULL),
-(3, 3, 2, '2024-11-08 10:30:00', 'Concluído', 'Fast Shop', '2024-11-08 11:00:00'),
-(1, 3, 1, '2024-11-08 11:15:00', 'Pendente', 'Saraiva', NULL),
-(2, 4, 2, '2024-11-08 11:45:00', 'Concluído', 'Saraiva', '2024-11-08 12:15:00');
+(1, 1, 1, '2024-11-05 10:00:00', 'Pendente', 'Laboratorio G1', NULL),
+(2, 1, 2, '2024-11-05 10:05:00', 'Concluído', 'Laboratorio G1', '2024-11-05 10:30:00'),
+(3, 1, 1, '2024-11-05 11:15:00', 'Cancelado', 'Laboratorio G2', NULL),
+(1, 1, 2, '2024-11-05 11:45:00', 'Em Andamento', 'Laboratorio G2', NULL),
+(2, 3, 1, '2024-11-05 12:00:00', 'Pendente', 'Sala 1', NULL),
+(3, 3, 2, '2024-11-05 12:30:00', 'Concluído', 'Sala 1', '2024-11-05 13:00:00'),
+(1, 4, 1, '2024-11-05 13:15:00', 'Pendente', 'Laboratorio G3', NULL),
+(2, 4, 2, '2024-11-05 13:45:00', 'Concluído', 'Laboratorio G3', '2024-11-05 14:20:00'),
+(3, 5, 1, '2024-11-05 14:30:00', 'Cancelado', 'Laboratorio G4', NULL),
+(1, 5, 2, '2024-11-05 15:00:00', 'Pendente', 'Laboratorio G4', NULL),
+(2, 6, 1, '2024-11-05 15:30:00', 'Concluído', 'Sala 2', '2024-11-05 16:00:00'),
+(3, 6, 2, '2024-11-05 16:10:00', 'Pendente', 'Sala 2', NULL),
+(1, 1, 1, '2024-11-06 09:00:00', 'Pendente', 'Laboratorio G1', NULL),
+(2, 1, 2, '2024-11-06 09:30:00', 'Concluído', 'Laboratorio G1', '2024-11-06 10:00:00'),
+(3, 2, 1, '2024-11-06 10:45:00', 'Cancelado', 'Laboratorio G2', NULL),
+(1, 2, 2, '2024-11-06 11:15:00', 'Em Andamento', 'Laboratorio G2', NULL),
+(2, 3, 1, '2024-11-06 11:30:00', 'Pendente', 'Sala 1', NULL),
+(3, 3, 2, '2024-11-06 12:00:00', 'Concluído', 'Sala 1', '2024-11-06 12:30:00'),
+(1, 4, 1, '2024-11-06 12:45:00', 'Pendente', 'Laboratorio G3', NULL),
+(2, 4, 2, '2024-11-06 13:15:00', 'Concluído', 'Laboratorio G3', '2024-11-06 13:50:00'),
+(3, 5, 1, '2024-11-06 14:00:00', 'Cancelado', 'Laboratorio G4', NULL),
+(1, 5, 2, '2024-11-06 14:30:00', 'Pendente', 'Laboratorio G4', NULL),
+(2, 6, 1, '2024-11-06 15:00:00', 'Concluído', 'Sala 2', '2024-11-06 15:30:00'),
+(3, 6, 2, '2024-11-06 15:40:00', 'Pendente', 'Sala 2', NULL),
+(1, 1, 1, '2024-11-07 08:45:00', 'Pendente', 'Laboratorio G1', NULL),
+(2, 1, 2, '2024-11-07 09:15:00', 'Concluído', 'Laboratorio G1', '2024-11-07 09:45:00'),
+(3, 3, 1, '2024-11-07 10:00:00', 'Cancelado', 'Laboratorio G2', NULL),
+(1, 3, 2, '2024-11-07 10:30:00', 'Em Andamento', 'Laboratorio G2', NULL),
+(2, 3, 1, '2024-11-07 10:45:00', 'Pendente', 'Sala 1', NULL),
+(3, 3, 2, '2024-11-07 11:15:00', 'Concluído', 'Sala 1', '2024-11-07 11:45:00'),
+(1, 4, 1, '2024-11-07 12:00:00', 'Pendente', 'Laboratorio G3', NULL),
+(2, 4, 2, '2024-11-07 12:30:00', 'Concluído', 'Laboratorio G3', '2024-11-07 13:05:00'),
+(3, 5, 1, '2024-11-07 13:20:00', 'Cancelado', 'Laboratorio G4', NULL),
+(1, 3, 2, '2024-11-07 13:50:00', 'Pendente', 'Laboratorio G4', NULL),
+(2, 6, 1, '2024-11-07 14:15:00', 'Concluído', 'Sala 2', '2024-11-07 14:45:00'),
+(3, 6, 2, '2024-11-07 15:00:00', 'Pendente', 'Sala 2', NULL),
+(1, 1, 1, '2024-11-08 08:00:00', 'Pendente', 'Laboratorio G1', NULL),
+(2, 1, 2, '2024-11-08 08:30:00', 'Concluído', 'Laboratorio G1', '2024-11-08 09:00:00'),
+(3, 2, 1, '2024-11-08 09:15:00', 'Cancelado', 'Laboratorio G2', NULL),
+(1, 2, 2, '2024-11-08 09:45:00', 'Em Andamento', 'Laboratorio G2', NULL),
+(2, 3, 1, '2024-11-08 10:00:00', 'Pendente', 'Sala 1', NULL),
+(3, 3, 2, '2024-11-08 10:30:00', 'Concluído', 'Sala 1', '2024-11-08 11:00:00'),
+(1, 3, 1, '2024-11-08 11:15:00', 'Pendente', 'Laboratorio G3', NULL),
+(2, 4, 2, '2024-11-08 11:45:00', 'Concluído', 'Laboratorio G3', '2024-11-08 12:15:00');
 
 -- INSERT INTO `item_pedido`
 -- Tabela item_pedido com os últimos 10 produtos e associada aos pedidos recentes
 INSERT INTO `item_pedido` (`id_pedido`, `id_produto`, `quantidade`) VALUES
-(1, 1, 2),   -- Mouse Gamer
-(2, 2, 1),   -- Teclado Mecânico
-(3, 3, 1),  -- Smart TV 4K
-(4, 4, 3),   -- Fone de Ouvido Bluetooth
-(5, 5, 1),   -- Cafeteira Expresso
-(6, 6, 4),    -- Livro - 1984
-(7, 7, 1),   -- Tênis Esportivo
-(8, 8, 2),    -- Bolsa Feminina
-(9, 9, 1),   -- Ventilador de Mesa
-(10, 10, 2), -- Tablet Samsung
-(11, 1, 1),  -- Mouse Gamer
-(12, 2, 2),  -- Teclado Mecânico
-(13, 3, 1), -- Smart TV 4K
-(14, 4, 1),  -- Fone de Ouvido Bluetooth
-(15, 5, 3),  -- Cafeteira Expresso
-(16, 6, 2),   -- Livro - 1984
-(17, 7, 1),  -- Tênis Esportivo
-(18, 8, 1),   -- Bolsa Feminina
-(19, 9, 2),  -- Ventilador de Mesa
-(20, 10, 1), -- Tablet Samsung
-(21, 1, 1),  -- Mouse Gamer
-(22, 2, 1),  -- Teclado Mecânico
-(23, 3, 1), -- Smart TV 4K
-(24, 4, 2),  -- Fone de Ouvido Bluetooth
-(25, 5, 1),  -- Cafeteira Expresso
-(26, 6, 1),   -- Livro - 1984
-(27, 7, 1),  -- Tênis Esportivo
-(28, 8, 1),   -- Bolsa Feminina
-(29, 9, 1),  -- Ventilador de Mesa
-(30, 10, 2), -- Tablet Samsung
-(31, 1, 2),  -- Mouse Gamer
-(32, 2, 1),  -- Teclado Mecânico
-(33, 3, 1), -- Smart TV 4K
-(34, 4, 3),  -- Fone de Ouvido Bluetooth
-(35, 5, 1),  -- Cafeteira Expresso
-(36, 6, 4),   -- Livro - 1984
-(37, 7, 1),  -- Tênis Esportivo
-(38, 8, 2),   -- Bolsa Feminina
-(39, 9, 1),  -- Ventilador de Mesa
-(40, 10, 1), -- Tablet Samsung
-(41, 1, 1),  -- Mouse Gamer
-(42, 2, 2),  -- Teclado Mecânico
-(43, 3, 1), -- Smart TV 4K
+(1, 1, 2),  
+(2, 2, 1), 
+(3, 3, 1),
+(4, 4, 3), 
+(5, 5, 1), 
+(6, 6, 4),  
+(7, 7, 1),  
+(8, 8, 2), 
+(9, 9, 1),   
+(10, 10, 2), 
+(11, 1, 1),  
+(12, 2, 2), 
+(13, 3, 1),
+(14, 4, 1), 
+(15, 5, 3),
+(16, 6, 2), 
+(17, 7, 1), 
+(18, 8, 1), 
+(19, 9, 2), 
+(20, 10, 1),
+(21, 1, 1),
+(22, 2, 1),
+(23, 3, 1),
+(24, 4, 2),
+(25, 5, 1),
+(26, 6, 1),
+(27, 7, 1),
+(28, 8, 1),
+(29, 9, 1),
+(30, 10, 2),
+(31, 1, 2),
+(32, 2, 1),
+(33, 3, 1),
+(34, 4, 3),
+(35, 5, 1),
+(36, 6, 4),
+(37, 7, 1),
+(38, 8, 2),
+(39, 9, 1),
+(40, 10, 1),
+(41, 1, 1),
+(42, 2, 2), 
+(43, 3, 1),
 (44, 4, 1);
 
 INSERT INTO registro_bateria (dispositivo_id, data_hora, porcentagem_bateria, dispositivos_ativos) VALUES
